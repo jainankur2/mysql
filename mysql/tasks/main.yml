@@ -1,0 +1,25 @@
+---
+ - name: copy the binary to role
+   copy:
+    src: /root/ankur/mysql-community-release-el7-7.noarch.rpm
+    dest: /var/lib/awx/projects/mysql/files/
+ - name: copy the binary
+   copy:
+    src: mysql-community-release-el7-7.noarch.rpm
+    dest: /root/
+ - name: install Mysql repo
+   command: /usr/bin/rpm -ivh /root/mysql-community-release-el7-7.noarch.rpm
+ - name: install Mysql server
+   yum:
+    name: mysql-server
+    state: present
+ - name: install MySQL python
+   yum:
+    name: MySQL-python
+    state: present
+ - name: start mysql server and enable it
+   service:
+    name: mysqld
+    state: started
+    enabled: yes
+
