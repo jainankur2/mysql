@@ -1,7 +1,7 @@
 ---
  - name: copy the binary to role
    copy:
-    src: /root/ankur/mysql-community-release-el7-7.noarch.rpm
+    src: /var/lib/awx/projects/mysql-community-release-el7-7.noarch.rpm
     dest: /var/lib/awx/projects/_12__mysql/mysql/files/
  - name: copy the binary
    copy:
