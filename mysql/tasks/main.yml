@@ -2,7 +2,7 @@
  - name: copy the binary to role
    copy:
     src: /var/lib/awx/projects/mysql-community-release-el7-7.noarch.rpm
-    dest: /var/lib/awx/projects/_12__mysql/mysql/files/
+    dest: mysql/files/
  - name: copy the binary
    copy:
     src: mysql-community-release-el7-7.noarch.rpm
