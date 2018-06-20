@@ -1,8 +1,0 @@
----
-- name: installing mysql
-  hosts: localhost
-  tasks:
-  - include_role:
-      name: mysql
-    delegate_to: mysql
-
